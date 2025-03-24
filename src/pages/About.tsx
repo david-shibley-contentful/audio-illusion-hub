@@ -36,7 +36,7 @@ const About = () => {
             
             <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto">
               A visionary record label at the intersection of artificial intelligence and musical creativity,
-              pushing the boundaries of what's possible in sound.
+              pushing the boundaries of what&apos;s possible in sound.
             </p>
           </div>
         </div>
@@ -218,7 +218,7 @@ const About = () => {
             
             <p className="text-white/80">
               As AI continues to evolve, so does our approach to music creation. 
-              Here's what we're building toward.
+              Here&apos;s what we&apos;re building toward.
             </p>
           </div>
           
