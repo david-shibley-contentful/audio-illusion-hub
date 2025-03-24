@@ -230,7 +230,7 @@ const About = () => {
               },
               {
                 title: 'Advancing the Technology',
-                description: 'Ongoing research and development into new AI models specifically designed for musical applications, creating proprietary tools that push the boundaries of what's possible.'
+                description: 'Ongoing research and development into new AI models specifically designed for musical applications, creating proprietary tools that push the boundaries of what&apos;s possible.'
               },
               {
                 title: 'Creating Immersive Experiences',
