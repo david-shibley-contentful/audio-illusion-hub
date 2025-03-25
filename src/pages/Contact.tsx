@@ -2,9 +2,13 @@
 import { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
-import { Mail, MapPin, Phone, Check, AlertCircle, Instagram, Twitter, Spotify, Youtube } from 'lucide-react';
+import { Mail, MapPin, Phone, Check, AlertCircle, Instagram, Twitter, Youtube } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import AnimatedBackground from '../components/AnimatedBackground';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import { AdvancedImage } from '@cloudinary/react';
 
 interface FormState {
   name: string;
@@ -14,6 +18,14 @@ interface FormState {
 }
 
 const Contact = () => {
+  const cld = new Cloudinary({ cloud: { cloudName: 'dgodidozd' } });
+  
+  // Use this sample image or upload your own via the Media Explorer
+  const img = cld
+        .image('6bc88314-31fb-419a-ba11-7cf54b3de82c_zeamyq')
+        .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
+        .quality('auto')
+        .resize(auto().gravity(autoGravity()).width(500).height(500))
   const [formData, setFormData] = useState<FormState>({
     name: '',
     email: '',
@@ -142,7 +154,7 @@ const Contact = () => {
                       href="mailto:info@audioillusion.com" 
                       className="text-white/70 hover:text-ai-teal transition-colors"
                     >
-                      info@audioillusion.com
+                      audio.illusion.music@gmail.com
                     </a>
                   </div>
                 </div>
@@ -154,7 +166,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-white font-medium mb-1">Location</h3>
                     <p className="text-white/70">
-                      Los Angeles, CA, United States
+                      Denver, CO, United States
                     </p>
                   </div>
                 </div>
@@ -166,7 +178,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-white font-medium mb-1">Phone</h3>
                     <p className="text-white/70">
-                      +1 (555) 123-4567
+                      +1 (661) 802-1360
                     </p>
                   </div>
                 </div>
@@ -176,10 +188,8 @@ const Contact = () => {
                 <h3 className="text-white font-medium mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
                   {[
-                    { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com", color: "hover:bg-pink-500/20 hover:text-pink-400" },
-                    { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com", color: "hover:bg-blue-500/20 hover:text-blue-400" },
-                    { icon: <Spotify className="h-5 w-5" />, href: "https://spotify.com", color: "hover:bg-green-500/20 hover:text-green-400" },
-                    { icon: <Youtube className="h-5 w-5" />, href: "https://youtube.com", color: "hover:bg-red-500/20 hover:text-red-400" },
+                    { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/a.udio_i.llusion/", color: "hover:bg-pink-500/20 hover:text-pink-400" },
+                    { icon: <Youtube className="h-5 w-5" />, href: "https://www.youtube.com/channel/UCAFpzKygfcV8SM0HCVgKPwQ", color: "hover:bg-red-500/20 hover:text-red-400" },
                   ].map((social, index) => (
                     <a 
                       key={index}
@@ -212,9 +222,11 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            <AdvancedImage cldImg={img} />
             
             {/* Contact Form */}
-            <div className="order-1 lg:order-2">
+            {/* <div className="order-1 lg:order-2">
               <div className="glass-dark p-8 rounded-xl border border-white/10">
                 <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">
                   Send Us a Message
@@ -331,7 +343,7 @@ const Contact = () => {
                   </button>
                 </form>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { Music, Mail, Instagram, Twitter, Spotify, Youtube } from 'lucide-react';
+import { Music, Mail, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Music className="h-6 w-6 text-ai-teal" />
               <span className="font-heading font-bold text-lg text-white">
-                AUDIO <span className="text-ai-teal">ILLUSION</span>
+                SHIBLEY <span className="text-ai-teal">RECORDS</span>
               </span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
@@ -62,10 +62,10 @@ const Footer = () => {
             <h4 className="text-white font-medium mb-4 text-base">Follow Us</h4>
             <div className="flex space-x-4 mb-6">
               {[
-                { icon: <Instagram className="h-5 w-5" />, href: "https://instagram.com" },
-                { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com" },
-                { icon: <Spotify className="h-5 w-5" />, href: "https://spotify.com" },
-                { icon: <Youtube className="h-5 w-5" />, href: "https://youtube.com" },
+                { icon: <Instagram className="h-5 w-5" />, href: "https://www.instagram.com/a.udio_i.llusion/" },
+                // { icon: <Twitter className="h-5 w-5" />, href: "https://twitter.com" },
+                // { icon: <Spotify className="h-5 w-5" />, href: "https://spotify.com" },
+                { icon: <Youtube className="h-5 w-5" />, href: "https://www.youtube.com/channel/UCAFpzKygfcV8SM0HCVgKPwQ" },
               ].map((social, index) => (
                 <a 
                   key={index}
@@ -82,7 +82,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 text-white/70">
               <Mail className="h-4 w-4" />
               <a href="mailto:info@audioillusion.com" className="text-sm hover:text-ai-teal transition-colors duration-300">
-                info@audioillusion.com
+                audio.illusion.music@gmail.com
               </a>
             </div>
           </div>

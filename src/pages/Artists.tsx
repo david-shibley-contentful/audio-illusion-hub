@@ -12,44 +12,13 @@ const artists = [
   {
     id: 1,
     name: 'Audio Illusion',
-    image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=600&h=800&q=80',
+    image: '',
     bio: 'The founding artist of the label, exploring the boundaries of AI-driven music creation across multiple genres.',
     socialLinks: {
-      spotify: 'https://spotify.com',
-      instagram: 'https://instagram.com',
-      twitter: 'https://twitter.com',
-      website: 'https://example.com',
-    },
-  },
-  {
-    id: 2,
-    name: 'Neural Pulse',
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&h=800&q=80',
-    bio: 'Ambient and downtempo producer known for expansive soundscapes and ethereal compositions.',
-    socialLinks: {
-      spotify: 'https://spotify.com',
-      instagram: 'https://instagram.com',
-    },
-  },
-  {
-    id: 3,
-    name: 'Quantum Echo',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&h=800&q=80',
-    bio: 'Experimental artist pushing the boundaries of electronic music with generative algorithms.',
-    socialLinks: {
-      spotify: 'https://spotify.com',
-      twitter: 'https://twitter.com',
-    },
-  },
-  {
-    id: 4,
-    name: 'Synthetic Dreams',
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=800&q=80',
-    bio: 'Future-focused producer blending retro synth sounds with cutting-edge AI techniques.',
-    socialLinks: {
-      spotify: 'https://spotify.com',
-      instagram: 'https://instagram.com',
-      website: 'https://example.com',
+      spotify: 'https://open.spotify.com/artist/6KWDyaPQl2NRKLYGhBy6tA',
+      instagram: 'https://www.instagram.com/a.udio_i.llusion/',
+      appleMusic: 'https://music.apple.com/us/artist/audio-illusion/1803385080',
+      website: 'https://soundcloud.com/a_udio-i_llusion',
     },
   },
 ];
@@ -83,7 +52,7 @@ const Artists = () => {
             </h1>
             
             <p className="text-lg text-white/80 mb-8 max-w-3xl mx-auto">
-              The innovative creators behind Audio Illusion's groundbreaking sound,
+              The innovative creators behind Shibley Records's groundbreaking sound,
               each bringing a unique perspective to AI-driven music.
             </p>
           </div>

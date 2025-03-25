@@ -5,12 +5,31 @@ import Footer from '../components/Footer';
 import { Play, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AnimatedBackground from '../components/AnimatedBackground';
+import React from 'react'
+import { Cloudinary } from '@cloudinary/url-gen';
+import { auto } from '@cloudinary/url-gen/actions/resize';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
+import { AdvancedImage } from '@cloudinary/react';
 
 const About = () => {
   // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const cld = new Cloudinary({ cloud: { cloudName: 'dgodidozd' } });
+  
+  // Use this sample image or upload your own via the Media Explorer
+  const img = cld
+        .image('6bc88314-31fb-419a-ba11-7cf54b3de82c_zeamyq')
+        .format('auto') // Optimize delivery by resizing and applying auto-format and auto-quality
+        .quality('auto')
+        .resize(auto().gravity(autoGravity()).width(500).height(500))
+
+  const imgLogo = cld
+        .image('02c0d531-d022-4324-8091-412d779955e0_cvwuin')
+        .format('auto')
+        .quality('auto')
+        .resize(auto().gravity(autoGravity()).width(500).height(400))
 
   return (
     <div className="bg-ai-navy min-h-screen text-white">
@@ -30,7 +49,7 @@ const About = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
               The Story Behind
               <span className="bg-gradient-to-r from-ai-teal to-ai-blue clip-text text-transparent block mt-2">
-                Audio Illusion
+                Shibley Records
               </span>
             </h1>
             
@@ -62,7 +81,7 @@ const About = () => {
               </p>
               
               <p className="text-white/80 mb-6">
-                Founded in 2022, our label embraces the tension between human artistry and computational creativity. 
+                Founded in 2025, our label embraces the tension between human artistry and computational creativity. 
                 We believe that this intersection is where the most interesting musical innovations occur.
               </p>
               
@@ -74,18 +93,7 @@ const About = () => {
             
             <div className="relative">
               <div className="aspect-video rounded-2xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&h=450&q=80" 
-                  alt="Audio Illusion Studio" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-ai-navy to-transparent opacity-40"></div>
-                
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button className="w-16 h-16 bg-ai-teal rounded-full flex items-center justify-center hover:bg-ai-teal/90 transition-colors">
-                    <Play className="h-6 w-6 text-ai-navy fill-ai-navy ml-0.5" />
-                  </button>
-                </div>
+                <AdvancedImage cldImg={imgLogo}/>
               </div>
             </div>
           </div>
@@ -155,11 +163,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
             <div className="md:col-span-2">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-gradient-to-b from-ai-navy to-ai-navy/80">
-                <img 
-                  src="https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=600&h=800&q=80" 
-                  alt="Audio Illusion Founder" 
-                  className="w-full h-full object-cover"
-                />
+                <AdvancedImage cldImg={img}/>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-ai-navy via-ai-navy/30 to-transparent opacity-60"></div>
               </div>
             </div>

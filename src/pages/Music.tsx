@@ -6,16 +6,29 @@ import AlbumCard from '../components/AlbumCard';
 import MusicPlayer from '../components/MusicPlayer';
 import { Search } from 'lucide-react';
 import AnimatedBackground from '../components/AnimatedBackground';
+import SoundCloudPlayer from '@/components/SoundCloudPlayer';
 
 // Sample albums data
 const allAlbums = [
   {
     id: 1,
-    title: 'Synthetic Dreams',
+    title: 'Backroads & Ballads',
     artist: 'Audio Illusion',
-    image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'Ambient',
-    year: '2023',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/backroads-ballads',
+    genre: 'Country',
+    year: '2025',
+    streamingLinks: {
+      spotify: 'https://spotify.com',
+      appleMusic: 'https://music.apple.com',
+      soundcloud: 'https://soundcloud.com',
+    },
+  },  {
+    id: 2,
+    title: 'Beauty in the Darkness',
+    artist: 'Audio Illusion',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/beauty-in-the-darkness',
+    genre: 'Hip-hop/Rap',
+    year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
       appleMusic: 'https://music.apple.com',
@@ -23,36 +36,25 @@ const allAlbums = [
     },
   },
   {
-    id: 2,
-    title: 'Neural Waves',
-    artist: 'Neural Pulse',
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&h=600&q=80',
+    id: 3,
+    title: 'Golden Hour',
+    artist: 'Audio Illusion',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/golden-hour',
     genre: 'Electronic',
-    year: '2023',
+    year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
       appleMusic: 'https://music.apple.com',
-    },
-  },
-  {
-    id: 3,
-    title: 'Harmonic Algorithm',
-    artist: 'Quantum Echo',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'Experimental',
-    year: '2022',
-    streamingLinks: {
-      spotify: 'https://spotify.com',
       soundcloud: 'https://soundcloud.com',
     },
   },
   {
     id: 4,
-    title: 'Digital Echoes',
-    artist: 'Synthetic Dreams',
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'Downtempo',
-    year: '2022',
+    title: 'Lovable Lullabies',
+    artist: 'Audio Illusion',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/lovable-lullabies',
+    genre: 'Electronic',
+    year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
       appleMusic: 'https://music.apple.com',
@@ -61,88 +63,36 @@ const allAlbums = [
   },
   {
     id: 5,
-    title: 'Quantum Frequencies',
+    title: 'Rise and Shine',
     artist: 'Audio Illusion',
-    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'IDM',
-    year: '2021',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/rise-and-shine',
+    genre: 'Electronic',
+    year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
       appleMusic: 'https://music.apple.com',
+      soundcloud: 'https://soundcloud.com',
     },
   },
   {
     id: 6,
-    title: 'Generative Patterns',
-    artist: 'Neural Pulse',
-    image: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'Ambient',
-    year: '2021',
-    streamingLinks: {
-      spotify: 'https://spotify.com',
-      soundcloud: 'https://soundcloud.com',
-    },
-  },
-  {
-    id: 7,
-    title: 'Algorithmic Harmony',
-    artist: 'Quantum Echo',
-    image: 'https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'Experimental',
-    year: '2020',
-    streamingLinks: {
-      spotify: 'https://spotify.com',
-      appleMusic: 'https://music.apple.com',
-    },
-  },
-  {
-    id: 8,
-    title: 'Sentient Machines',
-    artist: 'Synthetic Dreams',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&h=600&q=80',
-    genre: 'Electronic',
-    year: '2020',
+    title: 'Best Rappers Unalive',
+    artist: 'Audio Illusion',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/best-rappers-unalive',
+    genre: 'Rap',
+    year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
       appleMusic: 'https://music.apple.com',
       soundcloud: 'https://soundcloud.com',
     },
-  },
-];
-
-// Sample tracks data for music player
-const tracks = [
-  {
-    id: 1,
-    title: 'Synthetic Dreams',
-    artist: 'Audio Illusion',
-    duration: '3:45',
-  },
-  {
-    id: 2,
-    title: 'Digital Whispers',
-    artist: 'Audio Illusion',
-    duration: '4:12',
-  },
-  {
-    id: 3,
-    title: 'Neural Pathways',
-    artist: 'Audio Illusion',
-    duration: '5:20',
-  },
-  {
-    id: 4,
-    title: 'Quantum Dreams',
-    artist: 'Audio Illusion',
-    duration: '3:55',
-  },
+  }
 ];
 
 const Music = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('All');
   const [filteredAlbums, setFilteredAlbums] = useState(allAlbums);
-  const [isPlayerVisible, setIsPlayerVisible] = useState(false);
   
   // Scroll to top on page load
   useEffect(() => {
@@ -166,10 +116,6 @@ const Music = () => {
   
   // Get unique genres from albums
   const genres = ['All', ...Array.from(new Set(allAlbums.map(album => album.genre)))];
-  
-  const handleAlbumClick = () => {
-    setIsPlayerVisible(true);
-  };
 
   return (
     <div className="bg-ai-navy min-h-screen text-white">
@@ -239,39 +185,13 @@ const Music = () => {
           </div>
           
           {/* Albums Grid */}
-          {filteredAlbums.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-              {filteredAlbums.map((album, index) => (
-                <div 
-                  key={album.id}
-                  className="animate-fade-in"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <AlbumCard 
-                    album={album} 
-                    onClick={handleAlbumClick}
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-10">
-              <h3 className="text-xl font-medium text-white mb-2">No albums found</h3>
-              <p className="text-white/70">Try adjusting your search or filter criteria</p>
-            </div>
-          )}
+          {filteredAlbums. length > 0 && filteredAlbums.map((album) => {
+            return (
+              <SoundCloudPlayer playlistUrl={album.url}/>
+            )
+          })}
         </div>
       </section>
-      
-      {/* Music Player Fixed at Bottom */}
-      {isPlayerVisible && (
-        <div className="fixed bottom-0 left-0 right-0 z-40 p-4 animate-slide-in-bottom">
-          <div className="container mx-auto">
-            <MusicPlayer tracks={tracks} />
-          </div>
-        </div>
-      )}
-      
       <Footer />
     </div>
   );

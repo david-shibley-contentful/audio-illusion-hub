@@ -45,7 +45,7 @@ const NavBar = () => {
           >
             <Music className="h-8 w-8 text-ai-teal animate-pulse-subtle" />
             <span className="font-heading font-bold text-xl text-white">
-              AUDIO <span className="text-ai-teal">ILLUSION</span>
+              SHIBLEY <span className="text-ai-teal">RECORDS</span>
             </span>
           </Link>
 

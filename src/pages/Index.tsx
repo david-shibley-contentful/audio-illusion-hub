@@ -35,7 +35,7 @@ const Index = () => {
               </h2>
               
               <p className="text-white/80 mb-6">
-                Audio Illusion is more than a record label—it's a laboratory for the future of music. 
+                Shibley Records is more than a record label—it's a laboratory for the future of music. 
                 We blend cutting-edge AI technology with human creativity to push the boundaries of 
                 what's possible in sound design and composition.
               </p>
@@ -94,7 +94,7 @@ const Index = () => {
             </h2>
             
             <p className="text-white/80">
-              Audio Illusion combines technological innovation with artistic vision 
+              Shibley Records combines technological innovation with artistic vision 
               to create unique audio experiences.
             </p>
           </div>
@@ -147,7 +147,7 @@ const Index = () => {
       <FeaturedReleases />
       
       {/* Newsletter Signup */}
-      <NewsletterSignup />
+      {/* <NewsletterSignup /> */}
       
       {/* Footer */}
       <Footer />
