@@ -70,7 +70,7 @@ const FeaturedReleases = () => {
 
         <div
           ref={scrollRef}
-          className="flex space-x-6 overflow-x-auto pb-8 scrollbar-none"
+          className="flex flex-col md:flex-row space-x-6 overflow-x-auto pb-8 scrollbar-none"
         >
           <SoundCloudPlayer
             soundCloudUsername="a_udio-i_llusion"
