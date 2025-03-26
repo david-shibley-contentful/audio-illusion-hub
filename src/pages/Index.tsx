@@ -58,7 +58,7 @@ const Index = () => {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden glassmorphism bg-ai-blue/10">
                   <img 
-                    src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&h=800&q=80" 
+                    src="https://res.cloudinary.com/dgodidozd/image/upload/v1742965274/IMG_7781_xai6pf.png" 
                     alt="Audio Illusion Studio" 
                     className="w-full h-full object-cover opacity-80 mix-blend-luminosity"
                   />
