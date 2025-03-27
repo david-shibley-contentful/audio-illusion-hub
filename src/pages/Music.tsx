@@ -40,7 +40,7 @@ const allAlbums = [
     title: 'Golden Hour',
     artist: 'Audio Illusion',
     url: 'https://soundcloud.com/a_udio-i_llusion/sets/golden-hour',
-    genre: 'Electronic',
+    genre: 'Lofi',
     year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
@@ -80,6 +80,19 @@ const allAlbums = [
     artist: 'Audio Illusion',
     url: 'https://soundcloud.com/a_udio-i_llusion/sets/best-rappers-unalive',
     genre: 'Rap',
+    year: '2025',
+    streamingLinks: {
+      spotify: 'https://spotify.com',
+      appleMusic: 'https://music.apple.com',
+      soundcloud: 'https://soundcloud.com',
+    },
+  },
+  {
+    id: 7,
+    title: 'Phantom Frequencies',
+    artist: 'Audio Illusion',
+    url: 'https://soundcloud.com/a_udio-i_llusion/sets/phantom-frequencies',
+    genre: 'Midtempo bass / new beat',
     year: '2025',
     streamingLinks: {
       spotify: 'https://spotify.com',
